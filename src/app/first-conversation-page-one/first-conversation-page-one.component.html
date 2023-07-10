@@ -1,0 +1,18 @@
+<h2>Page 1</h2>
+
+<a routerLink="/first/page-two">Go to second page</a><br><br>
+
+<form (ngSubmit)="addTopic()">
+  <div>
+    <div>Add topic:</div>
+    <input name="topic" [(ngModel)]="topicName" type="text" />
+    <button type="submit">Add</button>
+    <div style="margin-top: 1rem">
+      <button type="button" (click)="addRandomTopic()">Add random</button>
+      <button (click)="loadRandomTopics()">Load random topics</button>
+    </div>
+  </div>
+</form>
+
+<h3>Topics</h3>
+<app-topic-list [topics]="stateService.topics()"></app-topic-list>

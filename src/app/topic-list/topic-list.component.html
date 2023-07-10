@@ -1,0 +1,7 @@
+<ol *ngIf="topics?.length">
+  <li *ngFor="let topic of topics">{{ topic }}</li>
+</ol>
+
+<div *ngIf="!topics?.length">
+  There are no topics
+</div>
