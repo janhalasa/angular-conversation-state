@@ -15,7 +15,7 @@ export class FirstConversationStateService implements OnDestroy {
     topics: []
   });
   
-  longTopics = computed(() => this.state().topics.filter(topic => topic.length > 20));
+  topics = computed(() => this.state().topics);
 
   constructor() {
     console.log('Creating FirstConversationStateService');
